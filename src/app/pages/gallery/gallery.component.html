@@ -1,0 +1,13 @@
+<div class="container">
+    <h1 class="text-center">Galéria</h1>
+    <div class="row">
+      <ng-container *ngFor="let kep of ['gallery (1).jpg', 'gallery (2).jpg', 'gallery (3).jpg']" class="col-sm-4">
+        <img src="assets/{{ kep }}" alt="{{ kep }}" id="imgfor" class="img-responsive">
+      </ng-container>
+    </div>
+    <div class="row">
+      <ng-container *ngFor="let kep of ['gallery (4).jpg', 'gallery (5).jpg', 'gallery (6).jpg']" class="col-sm-4">
+        <img src="assets/{{ kep }}" alt="{{ kep }}" id="imgfor" class="img-responsive">
+      </ng-container>
+    </div>
+  </div>
