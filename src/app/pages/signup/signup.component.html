@@ -1,1 +1,18 @@
-<p>signup works!</p>
+<div class="main_component">
+    <div class="div-flex">
+    <h1>Regisztráció</h1>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <div><label for="email">Email:</label><input type="text" formControlName="email"></div>
+        <div><label for="password">Jelszó:</label><input type="password" formControlName="password"></div>
+        <div><label for="password">Jelszó-újra:</label><input type="password" formControlName="repassword"></div>
+        <div formGroupName="name">
+            <div><label for="firstname">Vezetéknév:</label><input type="text" formControlName="firstname"></div>
+            <div><label for="lastname">Kerezstnév:</label><input type="text" formControlName="lastname"></div>
+        </div>
+        <div>
+            <button type="submit">Regisztráció</button>
+            <button routerLink="/login">Vissza a bejelentkezéshez</button>
+        </div>
+    </form>
+    </div>
+</div>

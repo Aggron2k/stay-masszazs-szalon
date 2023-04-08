@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class SignupComponent {
 
+  signUpForm = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl(''),
+    repassword: new FormControl(''),
+    name: new FormGroup({
+      firstname: new FormControl(''),
+      lastname: new FormControl('')
+    })
+  })
+
+  onSubmit(){
+    console.log(this.signUpForm.value);
+  }
 }
