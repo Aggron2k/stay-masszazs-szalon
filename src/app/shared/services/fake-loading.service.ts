@@ -14,22 +14,34 @@ export class FakeLoadingService {
   // setTimeout(() => {
 
   // },3000);
-  loadingWithPromise(email: string, password: string): Promise<boolean>{
-    return new Promise((resolve,reject) => {
+  // loadingWithPromise(email: string, password: string): Promise<boolean>{
+  //   return new Promise((resolve,reject) => {
+  //     let i = 0;
+  //     const interval = setInterval(() => {
+  //       i++;
+  //       if(i === 3){
+  //         clearInterval(interval)
+  //           if (email === 'asd' && password === 'asd'){
+  //             resolve(true);
+  //           }
+  //           else{
+  //             //console.error('Hibás bevitel!');
+  //             reject(false);
+  //           }
+  //       }
+  //     }, 1000);
+  //   });
+  // }
+  loadingWithPromise(email: string, password: string): Promise<boolean> {
+    return new Promise((resolve, reject) => {
       let i = 0;
-      const interval = setInterval(() => {
-        i++;
-        if(i === 3){
-          clearInterval(interval)
-            if (email === 'asd' && password === 'asd'){
-              resolve(true);
-            }
-            else{
-              //console.error('Hibás bevitel!');
-              reject(false);
-            }
+      setTimeout(() => {
+        if (email === 'asd' && password === 'asd') {
+        resolve(true) ;
+        } else {
+        reject(false);
         }
-      }, 1000);
+      }, 3000);
     });
   }
 }

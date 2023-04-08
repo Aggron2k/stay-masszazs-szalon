@@ -31,7 +31,7 @@ export class LoginComponent {
       this.loadingService.loadingWithPromise(this.email.value, this.password.value).then((_: boolean) => {
         this.router.navigateByUrl('/home');
       }).catch(error => {
-        console.error("Hibás email vagy jelszó!");
+        console.error(error, "Hibás email vagy jelszó!");
       }).finally(() => {
         console.log("Bejelentkezés esemény lefutott.");
       });
