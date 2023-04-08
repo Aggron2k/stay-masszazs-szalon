@@ -1,1 +1,21 @@
 <h2>Időpont foglalás</h2>
+<form (ngSubmit)="onSubmit()">
+  <label>
+    Név:
+    <input type="text" name="name" [(ngModel)]="name" required>
+  </label>
+  <br>
+  <label>
+    Időpont:
+    <select name="time" [(ngModel)]="time" required>
+      <option *ngFor="let t of times" [value]="t">{{t}}</option>
+    </select>
+  </label>
+  <br>
+  <button type="submit">Foglalás</button>
+</form>
+
+<h2>Foglalt időpontok:</h2>
+<ul>
+  <li *ngFor="let booking of bookings">{{booking.name}} - {{booking.time}}</li>
+</ul>
