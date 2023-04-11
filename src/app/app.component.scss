@@ -1,3 +1,21 @@
-*{
-    background-color: #050517;
+.logo{
+    width: 25px;
+}
+ul{
+    list-style-type: none;
+}
+.navbar{
+    top:9px;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover, a:active{
+    color:slategrey;
+}
+
+mat-sidenav{
+    width: 250px;
 }

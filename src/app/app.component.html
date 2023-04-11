@@ -1,3 +1,41 @@
-<app-navbar></app-navbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+        <app-navbar (onCloseSidenav)="onClose($event, sidenav)"></app-navbar>
+    </mat-sidenav>
+<mat-sidenav-content>
+    <mat-toolbar color="primary">
+        <div fxHide.gt-sm>
+            <button mat-icon-button (click)="onToggleSidenav(sidenav)">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+        <div>|Stay| <mat-icon>volunteer_activism</mat-icon> Masszázs Szalon</div>
+        <div>
+            <div class="navbar" fxFlex fxLayout>
+                <ul fxLayout fxLayoutGap="20px" fxHide.sm>
+                  <li>
+                    <a class="nav-link" routerLink="home" routerLinkActive="active-link">Kezdőlap</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="service" routerLinkActive="active-link">Szolgáltatások</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="prices" routerLinkActive="active-link">Árak</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="gallery" routerLinkActive="active-link">Galléria</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="login" routerLinkActive="active-link">Bejelentkezés</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="signup" routerLinkActive="active-link">Regisztráció</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </mat-toolbar>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
+</mat-sidenav-content>
+</mat-sidenav-container>
