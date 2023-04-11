@@ -17,17 +17,23 @@ export class LoginComponent {
   email = new FormControl('');
   password = new FormControl('');
 
+  loading: boolean = false;
+
   login() {
+    this.loading = true;
     if (this.email.value !== null && this.password.value !== null) {
       this.loadingService.loadingWithPromise(this.email.value, this.password.value).then((_: boolean) => {
         this.router.navigateByUrl('/home');
       }).catch(error => {
         console.error(error, "Hibás email vagy jelszó!");
+        this.loading = false;
       }).finally(() => {
         console.log("Bejelentkezés esemény lefutott.");
+        this.loading = false;
       });
     } else {
       console.error("Érvénytelen email vagy jelszó!");
+      this.loading = false;
     }
   }
 }
