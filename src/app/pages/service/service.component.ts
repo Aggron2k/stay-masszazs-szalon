@@ -28,4 +28,7 @@ export class ServiceComponent{
     this.name = '';
     this.time = '';
   }
+  picker(){
+    
+  }
 }

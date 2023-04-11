@@ -1,4 +1,4 @@
-<h2>Időpont foglalás</h2>
+<!-- <h2>Időpont foglalás</h2>
 <form (ngSubmit)="onSubmit()">
   <label>
     Név:
@@ -10,15 +10,15 @@
     <select name="time" [(ngModel)]="time" required>
       <option *ngFor="let t of times" [value]="t">{{t}}</option>
     </select>
-  </label>
-  <!-- <mat-form-field appearance="fill">
-    <mat-label>Choose a date</mat-label>
-    <input matInput [matDatepicker]="picker">
-    <mat-hint>MM/DD/YYYY</mat-hint>
-    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field> -->
-  <!-- <mat-form-field></mat-form-field> -->
+  </label> -->
+  
+
+  <mat-form-field appearance="fill">
+    <mat-label>Vállasz dátumot</mat-label>
+    <!-- <input matInput [matDatepicker]="picker"> -->
+    <!-- <mat-datepicker #picker></mat-datepicker> -->
+  </mat-form-field>
+<!--   
   <br>
   <button type="submit">Foglalás</button>
 </form>
@@ -26,4 +26,4 @@
 <h2>Foglalt időpontok:</h2>
 <ul>
   <li *ngFor="let booking of bookings">{{booking.name}} - {{booking.time}}</li>
-</ul>
+</ul> -->
