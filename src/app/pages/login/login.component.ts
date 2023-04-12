@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormControl} from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FakeLoadingService } from '../../shared/services/fake-loading.service';
 

@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ServiceRoutingModule } from './service-routing.module';
-import { MatFormFieldModule, MatHint } from '@angular/material/form-field';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDatepickerModule, MatDatepickerInputEvent  } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+
 
 
 @NgModule({
@@ -17,10 +19,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
-    MatHint,
-    NgModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatDatepickerInputEvent
   ]
 })
 export class ServiceModule { }
