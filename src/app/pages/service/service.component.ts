@@ -3,6 +3,7 @@ import { TimeSlot } from './time-slot';
 import { TimeSlotService } from './time-slot.service';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 
 
 @Component({
@@ -11,8 +12,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./service.component.scss']
 })
 export class ServiceComponent{
-
-  dateChanged($event: MatDatepickerInputEvent<any, any>){
+  dateChanged($event: MatDatepickerInputEvent<Date>){
     console.log($event.value);
   }
 }
