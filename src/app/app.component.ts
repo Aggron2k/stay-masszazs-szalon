@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { AuthService } from './shared/services/auth.service';
 
@@ -7,7 +7,7 @@ import { AuthService } from './shared/services/auth.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'stay-masszazs-szalon';
 
   loggedInUser?: firebase.default.User | null;
