@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "stay-masz": {
+      "hosting": {
+        "stay-masszazs-szalon": [
+          "stay-masz"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "stay-masz"
+  }
+}
